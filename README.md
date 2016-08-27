@@ -4,7 +4,7 @@
 
 ## Acknowledge
 Tiger is highly inspired by Dagger, Kudos to those great guys.
-
+[pokefortress](http://www.pokefortress.com/)
 ## Challenge
 If one found a DI framework faster, let me know. I will drop the title as long as it is proved.
 
@@ -21,7 +21,7 @@ Tiger is an annotation process. Therefore just build the jar and use it the way 
 
 ## How?
 Before diving into details, it will be helpful, very helpful, to understand the intended usage of tiger. Tiger is designed to let machine to as much as possible and let human do as little as possible. It requires minimal information from the developer. From these information, scoped injectors are generated. Application can instances these injectors and use them to inject classes. To achieve this, tiger has distilled the information needed to generate injectors. Here are they, with related annotation.
-
+[pokefortress](http://www.pokefortress.com/)
 ## Scopes
 Usually application has at least one scope, singleton. Even if there is no scoped binding, it is harmless to have a singleton scope. Therefore, tiger requires there always be a scope tree. The root is usually singleton, but not necessary. Details will be shown later in the sample. Tiger generate one injector class for each scope.
 
@@ -51,7 +51,7 @@ This the annotation that triggers the generation processor.
 `@Module`, `@Inject` and `@MembersInjector` are naturally scattered around the code. For the others, i.e., `@ScopeDenendency`, `@PackageForGenerated`, `@ScopedComponentNames` and `@GenerationTriggerAnnotation`, we suggest to put them into a dedicated java file as the central configuration information for the app.
 
 Here is the depicted code the sample(with some modification)
-
+[pokefortress](http://www.pokefortress.com/)
 ``` java
 @GenerationTriggerAnnotation
 @PackageForGenerated("sample")
@@ -85,7 +85,7 @@ activityInjector.injectPseudoActivity(this);
 
 
 The injectors guarantee that scoped bindings will be instantiated at most once within a scope. The application needs to create related injectors for scope objects, e.g., in android, a context scoped injector for each Activity, a singleton scoped injector for the Application.
-
+[pokefortress](http://www.pokefortress.com/)
 ## Tip
 Inspecting the generate code will help you. If you want more, there is source code.
 Enjoy injection!
